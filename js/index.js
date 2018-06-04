@@ -1,8 +1,7 @@
 var max = 0;
 var min = 0;
 
-alert(max);
-alert(min);
+alert("开始你的表演");
 
 setTimeout(function (){
 	alert(max);
