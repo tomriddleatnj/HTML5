@@ -1,24 +1,23 @@
-"use strict";
-var isStarted = false;
+var max = 0;
+var min = 0;
 
-// 开始摇签
-function start() {
-	isStarted = true;
-	$('.qiancover').hide();
-	$('.decode').hide();
-	$('.result').show();
-	// setTimeout(showDecode, 3000);
-}
+alert(max);
+alert(min);
 
-//摇一摇(使用DeviceMotion事件, 推荐,应为可以计算加速度)
+setTimeout(function (){
+	alert(max);
+	alert(min);
+}, 5000);
+
 if (window.DeviceMotionEvent) {
-	var speed = 25;
-	var x, y, z, lastX, lastY, lastZ;
-	x = y = z = lastX = lastY = lastZ = 0;
-
 	window.addEventListener('devicemotion', function (event) {
 		var acceleration = event.accelerationIncludingGravity;
 		y = acceleration.y;
-		alert(y);
+		if(y > max){
+			max = y;
+		}
+		if(y < min){
+			min = y;
+		}
 	}, false);
 }
