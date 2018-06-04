@@ -18,12 +18,7 @@ if (window.DeviceMotionEvent) {
 
 	window.addEventListener('devicemotion', function (event) {
 		var acceleration = event.accelerationIncludingGravity;
-		x = acceleration.x;
 		y = acceleration.y;
-		if (Math.abs(x - lastX) > speed || Math.abs(y - lastY) > speed) {
-			alert(y);
-		}
-		lastX = x;
-		lastY = y;
+		alert(y);
 	}, false);
 }
