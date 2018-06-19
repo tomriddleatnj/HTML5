@@ -74,12 +74,12 @@ function goToTestResultPage(level) {
 	$("#main").unbind("click");
 
 	//加载倒计时页面
-	$("#main").attr("src", "./img/" + level + "1.gif");
+	$("#main").attr("src", "./img/" + level + "1.jpg");
 
 	if ('LE' !== level) {
 		setTimeout(function () {
 			$("#main").click(function () {
-				$("#main").attr("src", "./img/" + level + "2.gif");
+				$("#main").attr("src", "./img/" + level + "2.jpg");
 			});
 		}, 1000);
 	}
