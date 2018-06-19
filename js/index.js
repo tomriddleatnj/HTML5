@@ -54,7 +54,6 @@ function goToTestPage() {
 		times = fqc / 2;
 	}, 15000);
 	setTimeout(function () {
-		alert("十五秒内摇动了：" + times + "次！");
 		if (times <= 52) {
 			goToTestResultPage('LA');
 		} else if (times <= 78) {
