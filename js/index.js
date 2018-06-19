@@ -1,5 +1,4 @@
 $(function () {
-	alert("页面加载完成");
 	var y;
 	var lastY;
 	var fqc = 0;
