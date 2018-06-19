@@ -54,7 +54,33 @@ function goToTestPage() {
 		times = fqc / 2;
 	}, 15000);
 	setTimeout(function () {
-		alert("十五秒内摇动了：" + fqc / 2 + "次！");
 		alert("十五秒内摇动了：" + times + "次！");
+		if (times <= 52) {
+			goToTestResultPage('LA');
+		} else if (times <= 78) {
+			goToTestResultPage('LB');
+		} else if (times <= 100) {
+			goToTestResultPage('LC');
+		} else if (times <= 120) {
+			goToTestResultPage('LD');
+		} else {
+			goToTestResultPage('LE');
+		}
 	}, 18000);
+}
+
+function goToTestResultPage(level) {
+	//解除原click事件
+	$("#main").unbind("click");
+
+	//加载倒计时页面
+	$("#main").attr("src", "./img/" + level + "1.gif");
+
+	if ('LE' !== level) {
+		setTimeout(function () {
+			$("#main").click(function () {
+				$("#main").attr("src", "./img/" + level + "2.gif");
+			});
+		}, 1000);
+	}
 }
