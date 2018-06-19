@@ -1,7 +1,7 @@
 $(function () {
 	var y;
 	var lastY;
-	var fqc = 0;
+	fqc = 0;
 	//GIF封面展示完成后（约9秒）注册click事件方法：switchToPreparePage();
 	setTimeout(function () {
 		$("#main").click(switchToPreparePage);
