@@ -51,9 +51,10 @@ function goToTestPage() {
 	}
 	fqc = 0;
 	setTimeout(function () {
-		var times = fqc / 2;
-		setTimeout(function () {
-			alert("十五秒内摇动了：" + times + "次！");
-		}, 2500);
+		times = fqc / 2;
 	}, 15000);
+	setTimeout(function () {
+		alert("十五秒内摇动了：" + fqc / 2 + "次！");
+		alert("十五秒内摇动了：" + times + "次！");
+	}, 18000);
 }
