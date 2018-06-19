@@ -6,6 +6,7 @@ $(function () {
 	setTimeout(function () {
 		$("#main").click(switchToPreparePage);
 	}, 9000);
+
 	if (window.DeviceMotionEvent) {
 		window.addEventListener('devicemotion', function (event) {
 			var acceleration = event.accelerationIncludingGravity;
@@ -47,8 +48,13 @@ function goToTestPage() {
 
 	//加载测试计时页面
 	$("#main").attr("src", "./img/testing.gif");
-}
 
-//setTimeout(function () {
-//	alert("五秒内摇动：" + (fqc / 2) + "次！");
-//}, 15000);
+	alert(fqc);
+	fqc = 0;
+	setTimeout(function () {
+		var times = fqc / 2;
+		setTimeout(function(){
+			alert("十五秒内摇动了：" + times + "次！");
+		}, 2500);
+	}, 15000);
+}
