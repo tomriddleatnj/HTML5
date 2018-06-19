@@ -34,6 +34,7 @@ function goToTestPage() {
 	$("#main").unbind("click");
 
 	//加载测试计时页面
+	$("body").prepend('<audio src="./audio/audio.mp3" autoplay="autoplay"></audio>');
 	$("#main").attr("src", "./img/testing.gif");
 
 	y = 0;
