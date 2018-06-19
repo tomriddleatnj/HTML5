@@ -40,10 +40,10 @@ function goToTestPage() {
 	lastY = 0;
 	fqc = 0;
 	if (window.DeviceMotionEvent) {
-		alert("OK");
 		window.addEventListener('devicemotion', function (event) {
 			var acceleration = event.accelerationIncludingGravity;
 			lastY = y;
+			y = acceleration.y;
 			if (lastY * y < 0) {
 				fqc++;
 			}
